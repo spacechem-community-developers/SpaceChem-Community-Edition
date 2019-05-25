@@ -13,7 +13,7 @@ This is unlikely to change in the future, for legal reasons related to the game 
 
 ## Installing the update
 
-In the release archive you'll find a `SpaceChem.exe` executable file.
+In the [Release Page](https://github.com/spacechem-community-developers/SpaceChem-Community-Edition/releases/latest) you'll find a `SpaceChem.exe` executable file.
 This file needs to be placed in the Steam directory of SpaceChem, whose default path is:
 * Windows: `C:\Program Files (x86)\Steam\steamapps\common\SpaceChem`
 * Mac: `~/Library/Application Support/Steam/steamapps/common/SpaceChem`
