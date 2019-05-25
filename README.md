@@ -106,5 +106,5 @@ Because of legal limitations, we can't accept help from other contributors. Feat
 
 ## Acknowledgments
 
-The authors would like to thank Zach Barth, the head of Zachtronics Industries,
+The authors would like to thank Zach Barth, the head of Zachtronics,
 for allowing access to the source of the game to make this Community Edition possible.
