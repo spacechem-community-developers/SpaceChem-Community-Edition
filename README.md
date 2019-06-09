@@ -64,6 +64,7 @@ Default settings directory location:
 * `ConfirmExitRunningSimulation`: Controls if the confirmation dialog to exit a level is shown when trying to exit while the simulation is running.
 * `IndicateWaldoDirection`: A visual indicator of the direction a waldo is travelling is drawn on the waldo.
   As of now, the indicator is a different color for the half on the back.
+* `SctImportExport`: This feature allows exporting and importing custom ResearchNet solutions in the same format used by [SpaceChemTool](https://github.com/spacechem-community-developers/SpaceChemTool). This tool is used for easy sharing of puzzle solutions, especially during tournaments. Now you can select one of your custom puzzles and export its solution to your clipboard using the Export Solution button. Importing solutions is also possible by copying the solution text to your clipboard, selecting the puzzle whose solution you want to import, then clicking on Import Solution. Selecting a puzzle is necessary because SCT doesn't export the definition of the puzzle you're solving, but a puzzle definition is needed for importing. Importing a solution into a puzzle it wasn't created in may work in some cases, but will usually fail. **NOTE**: Import functionality isn't tested "in the wild" yet, and in the worst case, it may create broken solutions or even corrupt your save file. The risk is bigger if you import a solution for the "wrong" definition. Please back up your save file before importing to make sure you don't permanently lose data!
 
 ### Experimental settings
 
