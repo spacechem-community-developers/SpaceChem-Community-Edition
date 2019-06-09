@@ -21,9 +21,30 @@ This file needs to be placed in the Steam directory of SpaceChem, whose default 
 
 Overwrite the original file, it'll still be possible to recover it by verifying the game files via Steam.
 
-## Available improvements
+## Always-on improvements
 
-Other than a few general enhancement, most of the changes are individually selectable using the new tab in the `Options` menu in the Main Screen.
+There are some small general improvements, mostly small QoL stuff, and then some bigger things:
+
+### Support for the import/export used in tournaments
+The [SpaceChemTool](https://github.com/spacechem-community-developers/SpaceChemTool) (SCT for friends), used for the tournaments,
+can export and import solutions to custom puzzles.
+
+This ability is replicated here, for ease of access, by two new buttons in the custom puzzles screen, select a custom puzzle and:
+* `Export solution` places in your clipboard an export identical to what the SCT will produce
+* `Import solution` loads a solution in the format above from your clipboard and places it in a copy of the puzzle.  
+  It's possible to load multiple puzzles in a single go by having all their exports in the clipboard
+
+Selecting a puzzle is necessary because SCT doesn't export the definition of the puzzle you're solving, but a puzzle definition is needed for importing.
+
+Importing a solution into a puzzle it wasn't created in may work if the puzzle available tools are fully compatible, but will usually fail.
+
+**NOTE**: Import functionality isn't tested "in the wild" yet, and in the worst case, it may create broken solutions or even corrupt your save file.
+The risk is bigger if you import a solution for the "wrong" definition.
+Please back up your save file before importing to make sure you don't permanently lose data!
+
+## Togglable improvements
+
+Most of the changes are individually selectable using the new tab in the `Options` menu in the Main Screen.
 Once the game has been launched once, a new file storing the new settings will be created in the main SC saves directory, called `mod_config.ini`,
 there it's possible to set all the new settings without the game and change some more experimental settings which do not have a corresponding entry in the in-game menu.
 
@@ -32,7 +53,7 @@ Default settings directory location:
 * Linux: `~/.local/share/Zachtronics Industries/SpaceChem/mod_config.ini`
 * Mac: `~/.local/share/zachtronics industries/spacechem/mod_config.ini`
 
-## Available settings
+### GUI settings
 
 * `AllowIllegalBondsInCustomPuzzles`: Allow bonds that exceed the bond limit of the participating atoms
   when editing input and output molecules in ResearchNet puzzles.
@@ -64,7 +85,6 @@ Default settings directory location:
 * `ConfirmExitRunningSimulation`: Controls if the confirmation dialog to exit a level is shown when trying to exit while the simulation is running.
 * `IndicateWaldoDirection`: A visual indicator of the direction a waldo is travelling is drawn on the waldo.
   As of now, the indicator is a different color for the half on the back.
-* `SctImportExport`: This feature allows exporting and importing custom ResearchNet solutions in the same format used by [SpaceChemTool](https://github.com/spacechem-community-developers/SpaceChemTool). This tool is used for easy sharing of puzzle solutions, especially during tournaments. Now you can select one of your custom puzzles and export its solution to your clipboard using the Export Solution button. Importing solutions is also possible by copying the solution text to your clipboard, selecting the puzzle whose solution you want to import, then clicking on Import Solution. Selecting a puzzle is necessary because SCT doesn't export the definition of the puzzle you're solving, but a puzzle definition is needed for importing. Importing a solution into a puzzle it wasn't created in may work in some cases, but will usually fail. **NOTE**: Import functionality isn't tested "in the wild" yet, and in the worst case, it may create broken solutions or even corrupt your save file. The risk is bigger if you import a solution for the "wrong" definition. Please back up your save file before importing to make sure you don't permanently lose data!
 
 ### Experimental settings
 
