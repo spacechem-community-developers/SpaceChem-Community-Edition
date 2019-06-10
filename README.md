@@ -3,7 +3,7 @@
 
 This project will replace your [SpaceChem](http://www.zachtronics.com/spacechem/) game executable to add new features to the game.
 
-This project is the continuation of the [SpaceChem Community update (v1013)](https://steamcommunity.com/games/92800/announcements/detail/1737729728308220584), 
+This project is the **Zachtronics-approved** continuation of the [SpaceChem Community update (v1013)](https://steamcommunity.com/games/92800/announcements/detail/1737729728308220584), 
 with more features added that are not either ready or polished enough to land in the official release of SpaceChem.
 
 ## Supported game versions
