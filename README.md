@@ -42,6 +42,12 @@ Importing a solution into a puzzle it wasn't created in may work if the puzzle a
 The risk is bigger if you import a solution for the "wrong" definition.
 Please back up your save file before importing to make sure you don't permanently lose data!
 
+### Keyboard accessibility
+* PgUp/PgDn moves to previous/next page in ResNet lists
+* PgUp/PgDn switches between planets in the level selector
+* In the custom assignment list, you can navigate via arrow keys or WASD, play by pressing Enter and delete by pressing Delete
+* The ResNet Access Denied screen can be dismissed with Enter and you can go back with Escape
+
 ## Togglable improvements
 
 Most of the changes are individually selectable using the new tab in the `Options` menu in the Main Screen.
