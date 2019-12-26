@@ -16,10 +16,11 @@ This is unlikely to change in the future, for legal reasons related to the game 
 In the [Release Page](https://github.com/spacechem-community-developers/SpaceChem-Community-Edition/releases/latest) you'll find a `SpaceChem.exe` executable file.
 This file needs to be placed in the Steam directory of SpaceChem, whose default path is:
 * Windows: `C:\Program Files (x86)\Steam\steamapps\common\SpaceChem`
-* Mac: `~/Library/Application Support/Steam/steamapps/common/SpaceChem`
 * Linux `~/.steam/steam/steamapps/common/SpaceChem`
 
 Overwrite the original file, it'll still be possible to recover it by verifying the game files via Steam.
+
+On Mac, the .exe file is within `~/Library/Application Support/Steam/steamapps/common/SpaceChem/SpaceChem.app`. In the Finder, right-click on `SpaceChem.app` and select *Show Package Contents*. Then navigate to `Contents/Resources/SpaceChem.exe` and replace the file with the new SpaceChem.exe file. (To display the `~/Library` folder in the Finder, hold down the option key while viewing the Go menu and select *Library*.)
 
 ## Always-on improvements
 
