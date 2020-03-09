@@ -26,6 +26,22 @@ On Mac, the .exe file is within `~/Library/Application Support/Steam/steamapps/c
 
 There are some small general improvements, mostly small QoL stuff, and then some bigger things:
 
+### Multiple solution support
+
+SpaceChem is the only Zachtronics puzzle game that doesn't allow you to keep multiple solutions for the same puzzle. If you want to
+try optimizing the same puzzle for multiple goals, you need to throw your old solutions away, bury them deep in the undo stack, or
+use tools like SaveChem to export and import them and maintain them outside the game. This improvement lets you maintain an unlimited
+number of additional solutions per puzzle and freely switch between them while the game is running.
+
+The UI follows the example set by Exapunks: you first need to load the level you want to play, then you can open a solution picker
+window by clicking on the new button added below the Undo and Redo buttons on the toolbar. This window lets you create blank new
+solutions or copy one of the existing ones. For technical reasons, your original solution is listed as "(Default solution)". This
+solution cannot be deleted or renamed. This is the only solution visible to the original game, so if you intend to switch back
+and forth between the original and the Community Edition, this is the one you need to keep up to date.
+
+**NOTE**: This improvement has to make changes to your save file the original would never do. While we've done some preliminary
+testing and it seems to be safe, it's recommended to back up your save file before you create any new solutions.
+
 ### Support for the import/export used in tournaments
 The [SpaceChemTool](https://github.com/spacechem-community-developers/SpaceChemTool) (SCT for friends), used for the tournaments,
 can export and import solutions to custom puzzles.
@@ -38,10 +54,6 @@ This ability is replicated here, for ease of access, by two new buttons in the c
 Selecting a puzzle is necessary because SCT doesn't export the definition of the puzzle you're solving, but a puzzle definition is needed for importing.
 
 Importing a solution into a puzzle it wasn't created in may work if the puzzle available tools are fully compatible, but will usually fail.
-
-**NOTE**: Import functionality isn't tested "in the wild" yet, and in the worst case, it may create broken solutions or even corrupt your save file.
-The risk is bigger if you import a solution for the "wrong" definition.
-Please back up your save file before importing to make sure you don't permanently lose data!
 
 ### Keyboard accessibility
 * PgUp/PgDn moves to previous/next page in ResNet lists
