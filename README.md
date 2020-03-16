@@ -46,12 +46,14 @@ testing and it seems to be safe, it's recommended to back up your save file befo
 The [SpaceChemTool](https://github.com/spacechem-community-developers/SpaceChemTool) (SCT for friends), used for the tournaments,
 can export and import solutions to custom puzzles.
 
-This ability is replicated here, for ease of access, by two new buttons in the custom puzzles screen, select a custom puzzle and:
-* `Export solution` places in your clipboard an export identical to what the SCT will produce
-* `Import solution` loads a solution in the format above from your clipboard and places it in a copy of the puzzle.  
-  It's possible to load multiple puzzles in a single go by having all their exports in the clipboard
+This ability is replicated here and is extended to all puzzles and all solutions (see above). To use it, open the solution picker window, then:
 
-Selecting a puzzle is necessary because SCT doesn't export the definition of the puzzle you're solving, but a puzzle definition is needed for importing.
+* Select `Export` to export solutions to your clipboard, in a format identical to what the SCT would produce.
+  You can either export the currently loaded solution, or all solutions of the current puzzle.
+* Select `Import` to import solutions from your clipboard. If the clipboard contains just one solution, it's also possible to overwrite the current
+  solution instead of importing the data into a new one. This is useful if you need to share a solution with the original game, which can
+  only see the default. Overwriting is not a destructive operation: you can undo it if you change your mind later, just like you can with regular
+  solution changes.
 
 Importing a solution into a puzzle it wasn't created in may work if the puzzle available tools are fully compatible, but will usually fail.
 
