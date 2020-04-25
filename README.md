@@ -63,6 +63,11 @@ Importing a solution into a puzzle it wasn't created in may work if the puzzle a
 * In the custom assignment list, you can navigate via arrow keys or WASD, play by pressing Enter and delete by pressing Delete
 * The ResNet Access Denied screen can be dismissed with Enter and you can go back with Escape
 
+### Return to assignment after completing it
+
+After completing an assignment, you can click on the (now enabled) Back button or press Escape to return to the assignment. This lets you iterate
+on your solution a bit more quickly when optimizing.
+
 ### Enhanced ResearchNet research puzzles
 
 You can have up to 4 sensors, fusion lasers, fission lasers and quantum tunnels in a puzzle now.
