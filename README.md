@@ -13,14 +13,16 @@ This is unlikely to change in the future, for legal reasons related to the game 
 
 ## Installing the update
 
-In the [Release Page](https://github.com/spacechem-community-developers/SpaceChem-Community-Edition/releases/latest) you'll find a `SpaceChem.exe` executable file.
-This file needs to be placed in the Steam directory of SpaceChem, whose default path is:
-* Windows: `C:\Program Files (x86)\Steam\steamapps\common\SpaceChem`
-* Linux `~/.steam/steam/steamapps/common/SpaceChem`
+Since version 6.0, Community Edition is distributed on Steam, just like the base game. To start using it, you need to opt in using
+the Steam "betas" feature. In your Library, right-click on SpaceChem, then select "Properties..." from the pop-up menu. In the
+window that pops up, select the Betas tab and select the "community-edition" option from the dropdown:
 
-Overwrite the original file, it'll still be possible to recover it by verifying the game files via Steam.
+![Illustration of the beta selector dropdown](beta_optin.png)
 
-On Mac, the .exe file is within `~/Library/Application Support/Steam/steamapps/common/SpaceChem/SpaceChem.app`. In the Finder, right-click on `SpaceChem.app` and select *Show Package Contents*. Then navigate to `Contents/Resources/SpaceChem.exe` and replace the file with the new SpaceChem.exe file. (To display the `~/Library` folder in the Finder, hold down the option key while viewing the Go menu and select *Library*.)
+To return to the vanilla experience, follow the same steps, but select "NONE - Opt out of all beta programs" from the dropdown.
+This will make Steam download the original game files.
+
+You will need Internet access both for opting in to the Community Edition and for opting out of it.
 
 ## Always-on improvements
 
