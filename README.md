@@ -100,6 +100,11 @@ of SpaceChem. This is necessary in order not to confuse the vanilla game and to 
 
 This is a very experimental feature at the moment, so we may have to break backwards compatibility to fix issues or to add missing features.
 
+### Allow direct adjustment of feature priorities
+    
+Using the mouse wheel on a feature that has a priority (bonders, tunnels, fusers and splitters) will adjust that priority up or down.
+This also allows you to give regular bonders a larger priority than plus-only or minus-only bonders, something you can't do by manually swapping them.
+
 ## Togglable improvements
 
 Most of the changes are individually selectable using the new tab in the `Options` menu in the Main Screen.
