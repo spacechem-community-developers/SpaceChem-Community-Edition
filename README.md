@@ -41,9 +41,6 @@ solutions or copy one of the existing ones. For technical reasons, your original
 solution cannot be deleted or renamed. This is the only solution visible to the original game, so if you intend to switch back
 and forth between the original and the Community Edition, this is the one you need to keep up to date.
 
-**NOTE**: This improvement has to make changes to your save file the original would never do. While we've done some preliminary
-testing and it seems to be safe, it's recommended to back up your save file before you create any new solutions.
-
 ### Support for the import/export used in tournaments
 The [SpaceChemTool](https://github.com/spacechem-community-developers/SpaceChemTool) (SCT for friends), used for the tournaments,
 can export and import solutions to custom puzzles.
@@ -164,10 +161,6 @@ In order not to confuse the vanilla game, and to prevent it from "fixing" the pu
 will assume they were created by a future version of SpaceChem, and won't let you edit or play them. While editing a research puzzle, the Community Edition will warn
 you if your choices result in a puzzle not compatible with the vanilla game. These puzzles are still safe to create and share even if you switch back to the vanilla
 version, they will just not be playable in that version.
-
-In version 4.2 and earlier, such research puzzles weren't handled specially and the vanilla game "fixed" them (i.e. forced the feature counts into the usual bounds)
-every time you opened the Custom Assignments screen. If you're upgrading from such a version, please make sure to open the Custom Assignments screen in the Community
-Edition before opening it in the vanilla game. This will convert your puzzles where necessary, and will make sure no data loss happens in the future.
 
 ## Versioning
 
