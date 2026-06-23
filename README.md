@@ -41,6 +41,15 @@ solutions or copy one of the existing ones. For technical reasons, your original
 solution cannot be deleted or renamed. This is the only solution visible to the original game, so if you intend to switch back
 and forth between the original and the Community Edition, this is the one you need to keep up to date.
 
+### Single-stepping the simulation
+
+When the running simulation is paused, the Pause button turns into a Step button. Clicking the Step button will resume the simulation
+(at whatever speed it was running previously), but will also auto-pause it at the beginning of the next cycle. This is useful for
+debugging complex situations where there is too much going on even at the slowest simulation speed.
+
+Step functionality is also available via the keyboard by pressing the Tab key. This only works when the simulation is running - when
+it's stopped, the Tab key switches between reactor layers like in the vanilla game.
+
 ### Support for the import/export used in tournaments
 The [SpaceChemTool](https://github.com/spacechem-community-developers/SpaceChemTool) (SCT for friends), used for the tournaments,
 can export and import solutions to custom puzzles.
@@ -61,6 +70,21 @@ Importing a solution into a puzzle it wasn't created in may work if the puzzle a
 * PgUp/PgDn switches between planets in the level selector
 * In the custom assignment list, you can navigate via arrow keys or WASD, play by pressing Enter and delete by pressing Delete
 * The ResNet Access Denied screen can be dismissed with Enter and you can go back with Escape
+
+### Mouse wheel support
+
+In addition to the scrolling functionality found in the vanilla game, you can also use your mouse wheel to quickly modify instructions in a reactor:
+
+* Directional instructions can be rotated clockwise or counter-clockwise by scrolling down or up while hovering over them.
+* Configurable instructions can be reconfigured by scrolling down or up while hovering over them. You can quickly toggle between input alpha / input beta,
+  the grab / drop / grab-drop states of a grab-drop instruction etc.
+* Clicking the mouse wheel (a.k.a. a middle mouse click) will swap the layer of the instruction, unless a conflicting instruction is already present.
+
+### Symbol cleanup
+
+The reactor right-click menu has a new item now, to remove unused symbols. Symbols not reachable by the corresponding waldo (i.e. "the line doesn't
+go through them") are removed, as well as redundant redirections (arrows and instructions that can only redirect the waldo to a direction
+it was already going).
 
 ### Return to assignment after completing it
 
@@ -141,6 +165,9 @@ Default settings directory location:
 * `ResNetDuplicateCopiesSolution`: In ResearchNet custom assignments, the Duplicate button normally just duplicates the puzzle definition and
   lets you start with a blank solution. With this option enabled, the button will also duplicate the solution of the assignment if it's present.
   To duplicate the puzzle without the solution, you can still export to the clipboard and immediately import the result back while this feature is enabled.
+* `TintReactorWithActiveLayer`: The currently selected waldo layer is indicated on the reactor background itself, by coloring it to the color of the selected
+  layer (i.e. the background has a red tint when red symbols can be placed and a blue tint when blue symbols can be placed). This can help players who use
+  the keyboard to place symbols and don't pay much attention to the color of the bottom toolbar.
 
 ### Experimental settings
 
