@@ -70,6 +70,11 @@ Importing a solution into a puzzle it wasn't created in may work if the puzzle a
 * PgUp/PgDn switches between planets in the level selector
 * In the custom assignment list, you can navigate via arrow keys or WASD, play by pressing Enter and delete by pressing Delete
 * The ResNet Access Denied screen can be dismissed with Enter and you can go back with Escape
+* You can use modifier keys to change the options or direction of symbols when dragging them from the toolbar or placing them via their letter hotkeys:
+  - For instructions with one alternative, holding down Ctrl or Shift will pick that alternative.
+  - For Grab-Drop, Shift picks Grab and Ctrl picks Drop.
+  - For directional instructions (Sensor, Control and Flip-Flop), Shift makes them point right, Ctrl makes them point left,
+    and Ctrl-Shift makes them point down.
 
 ### Mouse wheel support
 
@@ -78,7 +83,11 @@ In addition to the scrolling functionality found in the vanilla game, you can al
 * Directional instructions can be rotated clockwise or counter-clockwise by scrolling down or up while hovering over them.
 * Configurable instructions can be reconfigured by scrolling down or up while hovering over them. You can quickly toggle between input alpha / input beta,
   the grab / drop / grab-drop states of a grab-drop instruction etc.
-* Clicking the mouse wheel (a.k.a. a middle mouse click) will swap the layer of the instruction, unless a conflicting instruction is already present.
+* Clicking the mouse wheel (a.k.a. a middle mouse click) will swap the layer of the instruction. If a conflicting instruction is present, both will swap
+  colors to avoid a conflict. Note that this won't work when the conflicting symbol is a start instruction; middle clicks just won't do anything in that
+  case.
+* When hovering over the Undo or Redo button, you can flip through your history quickly with the mouse wheel. Scrolling down will undo and scrolling
+  up will redo, regardless of which button you are hovering on.
 
 ### Symbol cleanup
 
@@ -86,10 +95,22 @@ The reactor right-click menu has a new item now, to remove unused symbols. Symbo
 go through them") are removed, as well as redundant redirections (arrows and instructions that can only redirect the waldo to a direction
 it was already going).
 
+### Group mirroring
+
+In addition to vertical mirroring of whole reactors available in the vanilla game, you can now also select a group of instructions and mirror them
+horizontally or vertically from the right-click menu. This is different from whole-reactor mirroring in that it only affects the selected instructions,
+so it will never move reactor features or change output annotations like the whole-reactor version does.
+
 ### Return to assignment after completing it
 
 After completing an assignment, you can click on the (now enabled) Back button or press Escape to return to the assignment. This lets you iterate
 on your solution a bit more quickly when optimizing.
+
+### Hack ResearchNet only once
+
+The vanilla game blocks you from ResearchNet until you solve the puzzle that introduces flip-flops. You can bypass it, but you need to do it every
+time until you solve that particular puzzle. In Community Edition, you only need to bypass the warning screen once, then your decision gets saved
+in your save file and you can open it directly the next time.
 
 ### Enhanced ResearchNet research puzzles
 
