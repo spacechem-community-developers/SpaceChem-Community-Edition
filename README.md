@@ -48,7 +48,9 @@ When the running simulation is paused, the Pause button turns into a Step button
 debugging complex situations where there is too much going on even at the slowest simulation speed.
 
 Step functionality is also available via the keyboard by pressing the Tab key. This only works when the simulation is running - when
-it's stopped, the Tab key switches between reactor layers like in the vanilla game.
+it's stopped, the Tab key switches between reactor layers like in the vanilla game. You can also hold Shift while starting the simulation
+to start it in single-stepping mode. Finally, Num1..Num4 can be used to step (starting the simulation if it's stopped) without holding
+Shift.
 
 ### Support for the import/export used in tournaments
 The [SpaceChemTool](https://github.com/spacechem-community-developers/SpaceChemTool) (SCT for friends), used for the tournaments,
@@ -71,10 +73,12 @@ Importing a solution into a puzzle it wasn't created in may work if the puzzle a
 * In the custom assignment list, you can navigate via arrow keys or WASD, play by pressing Enter and delete by pressing Delete
 * The ResNet Access Denied screen can be dismissed with Enter and you can go back with Escape
 * You can use modifier keys to change the options or direction of symbols when dragging them from the toolbar or placing them via their letter hotkeys:
-  - For instructions with one alternative, holding down Ctrl or Shift will pick that alternative.
-  - For Grab-Drop, Shift picks Grab and Ctrl picks Drop.
-  - For directional instructions (Sensor, Control and Flip-Flop), Shift makes them point right, Ctrl makes them point left,
-    and Ctrl-Shift makes them point down.
+  - For instructions with one alternative, holding down Alt or Shift will pick that alternative.
+  - For Grab-Drop, Shift picks Grab and Alt picks Drop.
+  - For directional instructions (Sensor, Control and Flip-Flop), Shift makes them point right, Alt makes them point left,
+    and Alt-Shift makes them point down.
+  - The toolbar should reflect the effect of the currently held modifier, for example Grab-Drop will appear as Grab when Shift is held down, and directional
+    instructions point left.
 
 ### Mouse wheel support
 
