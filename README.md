@@ -41,7 +41,7 @@ solutions or copy one of the existing ones. For technical reasons, your original
 solution cannot be deleted or renamed. This is the only solution visible to the original game, so if you intend to switch back
 and forth between the original and the Community Edition, this is the one you need to keep up to date.
 
-### Single-stepping the simulation
+### Advanced debugging features
 
 When the running simulation is paused, the Pause button turns into a Step button. Clicking the Step button will resume the simulation
 (at whatever speed it was running previously), but will also auto-pause it at the beginning of the next cycle. This is useful for
@@ -51,6 +51,22 @@ Step functionality is also available via the keyboard by pressing the Tab key. T
 it's stopped, the Tab key switches between reactor layers like in the vanilla game. You can also hold Shift while starting the simulation
 to start it in single-stepping mode. Finally, Num1..Num4 can be used to step (starting the simulation if it's stopped) without holding
 Shift.
+
+The new `<|` and `<|x10` buttons, visible when the simulation is running, let you step back to one or ten cycles earlier in the simulation.
+(Actually, they reset then fast-forward the simulation to give the illusion of going back in time. For this reason, they may take a while
+ when stepping back from a long-running complex solution. Also, they aren't available in defense missions because those missions rely on
+ both player input and "true" random numbers.) Reactor error messages also come with a Step Back button now, to make it easier to see
+what lead up to the error.
+
+Community Edition lets you have breakpoints on any instruction. A breakpoint is indicated by a smaller circle drawn next to the regular
+instruction circle. Select the new "Breakpoint..." option in the right-click context menu, then check the Enabled checkbox to make the
+simulation stop on the instruction. The same dialog box also allows you to specify conditions like minimum cycle count, waldo direction
+and more. Pause instructions can be considered no-operation instructions with a breakpoint enabled by default: you can disable the
+breakpoint to turn them into true no-ops, or make them conditional like any other instruction breakpoint.
+
+Finally, you can have cycle-based breakpoints that pause the simulation at a given point in time regardless of what your solution does.
+You can edit the list of these by clicking on the More... button that replaces the Story & Info button of the vanilla game, then
+selecting Breakpoints...
 
 ### Support for the import/export used in tournaments
 The [SpaceChemTool](https://github.com/spacechem-community-developers/SpaceChemTool) (SCT for friends), used for the tournaments,
@@ -68,6 +84,7 @@ This ability is replicated here and is extended to all puzzles and all solutions
 Importing a solution into a puzzle it wasn't created in may work if the puzzle available tools are fully compatible, but will usually fail.
 
 ### Keyboard accessibility
+(The full list is available by pressing F1 while a level is open, or by clicking on the More... button and selecting Hotkeys)
 * PgUp/PgDn moves to previous/next page in ResNet lists
 * PgUp/PgDn switches between planets in the level selector
 * In the custom assignment list, you can navigate via arrow keys or WASD, play by pressing Enter and delete by pressing Delete
@@ -127,7 +144,7 @@ Please read the "Compatibility Notes" section below if you also want to run the 
 
 ### "Free-form" ResearchNet production puzzles
 
-This is a highly experimental addition to the ResearchNet puzzle editing functionality. When creating a free-form production puzzle, you can place items like
+This is a new kind of production puzzle available in ResearchNet. When creating a free-form production puzzle, you can place items like
 inputs (both random and programmable), outputs, recyclers and fixed reactors (like on planet Flidais) on the terrain freely, instead of being limited to
 a fixed number of inputs and outputs. If you move any pipes from their default state, those pipes also become locked and not editable while playing.
 
@@ -144,12 +161,19 @@ the disassembly reactor artwork if and only if you disable the bottom input pipe
 Free-form puzzles can only be played in the Community Edition v4.3 or later. The vanilla game will treat them as if they were created by a future version
 of SpaceChem. This is necessary in order not to confuse the vanilla game and to make sure it doesn't corrupt the puzzle while trying to load it.
 
-This is a very experimental feature at the moment, so we may have to break backwards compatibility to fix issues or to add missing features.
-
 ### Allow direct adjustment of feature priorities
     
 Using the mouse wheel on a feature that has a priority (bonders, tunnels, fusers and splitters) will adjust that priority up or down.
 This also allows you to give regular bonders a larger priority than plus-only or minus-only bonders, something you can't do by manually swapping them.
+
+### Undo data optimization
+
+Long-time players can easily accumulate a long undo history because of the unlimited undo feature of SpaceChem. Undo data can take tens of megabytes
+in extreme cases. Since version 7.1, Community Edition tries to help this a bit by writing smaller undo records that are nevertheless 100% compatible
+with the vanilla game.
+
+Note that this is only a modest improvement (a few percent) and is only applied to records written while playing Community Edition. Please see the
+file `undo_optimization.md` next to this one for more potent options, in case the size of your save file is causing issues.
 
 ## Togglable improvements
 
@@ -193,6 +217,10 @@ Default settings directory location:
 * `TintReactorWithActiveLayer`: The currently selected waldo layer is indicated on the reactor background itself, by coloring it to the color of the selected
   layer (i.e. the background has a red tint when red symbols can be placed and a blue tint when blue symbols can be placed). This can help players who use
   the keyboard to place symbols and don't pay much attention to the color of the bottom toolbar.
+* `OpenReactorOnPause`: When enabled, hitting a breakpoint will open the reactor containing the instruction. You can disable it if you prefer to stay at
+  whatever you were watching when the breakpoint hit. Enabled by default to mirror vanilla behavior. For instruction-based breakpoints, this is a default
+  that can be changed on a per-breakpoint basis.
+* `WaldoFinder`: Highlight the current location of the waldos using a simple animation when pressing Ctrl.
 
 ### Experimental settings
 
@@ -205,6 +233,8 @@ The following settings do not have a corresponding entry in the in-game menu, mo
 * `SpeedWarpDefense`: cycles/sec for the 4th speed button in defense levels
 * `SpeedDeltaCtrl`: extra cycles/sec added to the base speed if it's selected with Ctrl pressed
 * `SpeedRecording`: cycles/sec for the video recordings
+* `MaxStepSpeed`: maximum speed (between 1..4) to use when single-stepping using the Step button, the Tab key or Ctrl-Space.
+  Ignored when the hotkey implies a speed (for example, Ctrl-4 or Num 4 imply speed 4 and will not be limited by this setting).
 
 ## Compatibility Notes
 
